@@ -1,20 +1,30 @@
 
-{
-  "questions": [
-    {
-      "id": 1,
-      "question": "Krishna kon hote?",
-      "answer": "Shri Krishna हे हिंदू धर्मातील भगवान विष्णूचे आठवे अवतार होते."
-    },
-    {
-      "id": 2,
-      "question": "भारताची राजधानी कोणती?",
-      "answer": "भारताची राजधानी नवी दिल्ली आहे."
-    },
-    {
-      "id": 3,
-      "question": "UPI म्हणजे काय?",
-      "answer": "UPI म्हणजे Unified Payments Interface."
-    }
-  ]
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Guru Knowledge Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h2>AI Guru Knowledge Engine</h2>
+<p>Each answer costs ₹5</p>
+
+<select id="questionSelect">
+  <option value="1">Krishna kon hote?</option>
+  <option value="2">भारताची राजधानी कोणती?</option>
+  <option value="3">UPI म्हणजे काय?</option>
+</select>
+
+<br><br>
+
+<button onclick="payAndShow()">Pay ₹5 & Get Answer</button>
+
+<br><br>
+
+<div id="answerBox" style="font-weight:bold;"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
