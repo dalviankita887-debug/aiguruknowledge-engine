@@ -1,0 +1,20 @@
+
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Krishna kon hote?",
+      "answer": "Shri Krishna हे हिंदू धर्मातील भगवान विष्णूचे आठवे अवतार होते."
+    },
+    {
+      "id": 2,
+      "question": "भारताची राजधानी कोणती?",
+      "answer": "भारताची राजधानी नवी दिल्ली आहे."
+    },
+    {
+      "id": 3,
+      "question": "UPI म्हणजे काय?",
+      "answer": "UPI म्हणजे Unified Payments Interface."
+    }
+  ]
+}
