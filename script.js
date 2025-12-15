@@ -1,11 +1,26 @@
-function payNow() {
-  const question = document.getElementById("question").value;
+let questionsData = null;
 
-  if (question.trim() === "") {
-    alert("Please type a question first");
+// Load data.json
+fetch("data.json")
+  .then(res => res.json())
+  .then(data => {
+    questionsData = data.questions;
+  });
+
+function payAndShow() {
+  if (!questionsData) {
+    alert("Loading data, please wait...");
     return;
   }
 
-  document.getElementById("result").innerText =
-    "✅ Payment received (demo)\n\n🤖 AI Answer:\nThis is a demo answer. Real AI answer will come here automatically.";
+  // 👉 TEMP PAYMENT SIMULATION
+  // (Real UPI auto link next phase)
+  let confirmPay = confirm("Pay ₹5 via UPI to get answer");
+
+  if (!confirmPay) return;
+
+  let qid = document.getElementById("questionSelect").value;
+  let q = questionsData.find(item => item.id == qid);
+
+  document.getElementById("answerBox").innerText = q.answer;
 }
