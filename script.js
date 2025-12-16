@@ -1,26 +1,31 @@
-let questionsData = null;
 
-// Load data.json
-fetch("data.json")
-  .then(res => res.json())
-  .then(data => {
-    questionsData = data.questions;
-  });
+async function getAnswer() {
+  const q = document.getElementById("userQuestion").value.trim();
+  const box = document.getElementById("answerBox");
+  if (!q) { box.innerHTML = "❗Please type your question."; return; }
 
-function payAndShow() {
-  if (!questionsData) {
-    alert("Loading data, please wait...");
-    return;
-  }
+  box.innerHTML = "🔄 Processing your question…";
 
-  // 👉 TEMP PAYMENT SIMULATION
-  // (Real UPI auto link next phase)
-  let confirmPay = confirm("Pay ₹5 via UPI to get answer");
+  // Fake small delay
+  await new Promise(r => setTimeout(r, 1500));
 
-  if (!confirmPay) return;
+  // Payment step
+  const upi = "9307529851-2@ibl";
+  const amount = 5;
+  const intent = `upi://pay?pa=${upi}&pn=AI Guru Answer&am=${amount}&cu=INR&tn=Answer Payment`;
 
-  let qid = document.getElementById("questionSelect").value;
-  let q = questionsData.find(item => item.id == qid);
+  box.innerHTML = `
+  💰 To unlock your answer, please pay ₹${amount} using UPI.<br><br>
+  <a href="${intent}" style="color:#00ff99;font-weight:bold;">Click to Pay via UPI</a><br><br>
+  After payment, click below:<br>
+  <button onclick="showAnswer('${q}')">✅ I Have Paid</button>`;
+}
 
-  document.getElementById("answerBox").innerText = q.answer;
+async function showAnswer(q) {
+  const res = await fetch("data.json");
+  const data = await res.json();
+  const lower = q.toLowerCase();
+  let ans = data[lower];
+  if (!ans) ans = "🤖 Sorry, this answer is not in the database yet.";
+  document.getElementById("answerBox").innerHTML = `<b>Answer:</b><br>${ans}`;
 }
