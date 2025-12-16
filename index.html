@@ -1,30 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Guru Knowledge Engine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#002f4b,#dc4225);
+      color:#fff;
+      text-align:center;
+      padding:2rem;
+    }
+    h1{font-size:1.8rem;margin-bottom:1rem;}
+    input{
+      padding:0.7rem;width:80%;max-width:400px;
+      border:none;border-radius:5px;
+    }
+    button{
+      margin-top:1rem;padding:0.7rem 1.5rem;
+      background:#00ff99;border:none;border-radius:6px;
+      font-weight:bold;cursor:pointer;
+    }
+    #answerBox{margin-top:2rem;font-size:1.1rem;}
+  </style>
 </head>
 <body>
-
-<h2>AI Guru Knowledge Engine</h2>
-<p>Each answer costs ₹5</p>
-
-<select id="questionSelect">
-  <option value="1">Krishna kon hote?</option>
-  <option value="2">भारताची राजधानी कोणती?</option>
-  <option value="3">UPI म्हणजे काय?</option>
-</select>
-
-<br><br>
-
-<button onclick="payAndShow()">Pay ₹5 & Get Answer</button>
-
-<br><br>
-
-<div id="answerBox" style="font-weight:bold;"></div>
-
-<script src="script.js"></script>
+  <h1>AI Guru Knowledge Engine 💡</h1>
+  <p>Ask any question below – Each answer costs ₹5 (via UPI)</p>
+  <input id="userQuestion" placeholder="Type your question..." />
+  <button onclick="getAnswer()">Get Answer</button>
+  <div id="answerBox"></div>
+  <script src="script.js"></script>
 </body>
 </html>
