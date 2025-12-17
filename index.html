@@ -2,35 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Guru Knowledge Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ask any question. Pay ₹5. Get instant AI-powered answers. Fully automatic knowledge engine." />
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg,#002f4b,#dc4225);
-      color:#fff;
-      text-align:center;
-      padding:2rem;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
     }
-    h1{font-size:1.8rem;margin-bottom:1rem;}
-    input{
-      padding:0.7rem;width:80%;max-width:400px;
-      border:none;border-radius:5px;
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    button{
-      margin-top:1rem;padding:0.7rem 1.5rem;
-      background:#00ff99;border:none;border-radius:6px;
-      font-weight:bold;cursor:pointer;
+    h1 {
+      text-align: center;
+      color: #2c3e50;
     }
-    #answerBox{margin-top:2rem;font-size:1.1rem;}
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 18px;
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #219150;
+    }
+    .answer {
+      margin-top: 20px;
+      padding: 15px;
+      background: #ecf0f1;
+      border-radius: 6px;
+      display: none;
+    }
+    .note {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-  <h1>AI Guru Knowledge Engine 💡</h1>
-  <p>Ask any question below – Each answer costs ₹5 (via UPI)</p>
-  <input id="userQuestion" placeholder="Type your question..." />
-  <button onclick="getAnswer()">Get Answer</button>
-  <div id="answerBox"></div>
-  <script src="script.js"></script>
+  <div class="container">
+    <h1>AI Guru Knowledge Engine</h1>
+
+    <textarea id="question" placeholder="Ask your question here..."></textarea>
+
+    <!-- PAYMENT BUTTON -->
+    <a href="plink_RslYRq5Bd7VKVD" target="_blank">
+      <button id="payBtn">Pay ₹5 & Get Answer</button>
+    </a>
+
+    <div class="note">
+      Secure payment • Instant answer • Fully automatic system
+    </div>
+
+    <div id="answerBox" class="answer">
+      <strong>Answer:</strong>
+      <p id="answerText"></p>
+    </div>
+  </div>
+
+  <script>
+    // Simple demo AI logic (Phase-1)
+    const answers = [
+      "Success comes from consistency and right action.",
+      "Health improves when mind and body are balanced.",
+      "Focus on learning one thing deeply every day.",
+      "Positive thinking creates positive outcomes.",
+      "Discipline is the bridge between goals and results."
+    ];
+
+    // Show answer automatically when user comes back after payment
+    window.onload = function () {
+      const q = document.getElementById("question");
+      const answerBox = document.getElementById("answerBox");
+      const answerText = document.getElementById("answerText");
+
+      if (q.value !== "") {
+        const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+        answerText.innerText = randomAnswer;
+        answerBox.style.display = "block";
+      }
+    };
+  </script>
 </body>
 </html>
