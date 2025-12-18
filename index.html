@@ -1,72 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AI Knowledge Engine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      text-align: center;
-      padding: 40px 10px;
-    }
-    .box {
-      max-width: 420px;
-      margin: auto;
-      background: #111;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    }
-    h1 {
-      color: #00ffd5;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      margin-top: 10px;
-      font-size: 16px;
-    }
-    button {
-      margin-top: 15px;
-      padding: 14px;
-      width: 100%;
-      border: none;
-      border-radius: 10px;
-      font-size: 18px;
-      background: #00ffd5;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .note {
-      font-size: 14px;
-      margin-top: 10px;
-      color: #ccc;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Guru Knowledge Engine</title>
+
+<style>
+body{
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+}
+
+.wrapper{
+  max-width:430px;
+  margin:auto;
+  padding:25px 15px;
+}
+
+.brand{
+  text-align:center;
+  margin-bottom:20px;
+}
+.brand h1{
+  font-size:26px;
+  margin:0;
+}
+.brand p{
+  opacity:0.9;
+  font-size:14px;
+}
+
+.card{
+  background:#ffffff;
+  color:#000;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+
+.price{
+  font-size:36px;
+  font-weight:bold;
+  color:#1b5e20;
+  text-align:center;
+}
+
+.sub{
+  text-align:center;
+  font-size:14px;
+  margin-bottom:15px;
+  color:#333;
+}
+
+ul{
+  padding-left:18px;
+  font-size:15px;
+}
+ul li{
+  margin:8px 0;
+}
+
+.pay-btn{
+  display:block;
+  margin-top:20px;
+  padding:16px;
+  text-align:center;
+  background:linear-gradient(135deg,#00c853,#64dd17);
+  color:#000;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:14px;
+  text-decoration:none;
+}
+
+.trust{
+  margin-top:15px;
+  font-size:13px;
+  color:#444;
+  text-align:center;
+}
+
+.badges{
+  display:flex;
+  justify-content:space-around;
+  margin-top:12px;
+  font-size:12px;
+  color:#333;
+}
+
+.footer{
+  text-align:center;
+  margin-top:25px;
+  font-size:12px;
+  opacity:0.85;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="box">
-    <h1>AI Knowledge Engine</h1>
-    <p>Ask any question and get instant AI answer</p>
+<div class="wrapper">
 
-    <input type="text" placeholder="Type your question here" />
+  <div class="brand">
+    <h1>AI Guru Knowledge Engine</h1>
+    <p>Instant Paid AI Answers • Trusted Platform</p>
+  </div>
 
-    <!-- 🔴 PAY BUTTON WITH RAZORPAY LINK -->
-    <a href="https://rzp.io/rzp/OPuKcBe" target="_blank">
-      <button>Pay ₹5 & Get Answer</button>
+  <div class="card">
+
+    <div class="price">₹5</div>
+    <div class="sub">Per Question • One-Time Payment</div>
+
+    <ul>
+      <li>✔ Accurate AI-Generated Answers</li>
+      <li>✔ Exams, Health, Knowledge, Daily Questions</li>
+      <li>✔ No Signup • No Subscription</li>
+      <li>✔ Pay Only When You Need</li>
+    </ul>
+
+    <!-- 🔴 UPI PAYMENT BUTTON -->
+    <a class="pay-btn"
+       href="upi://pay?pa=9307529851-2@ibl&pn=AI Guru Knowledge Engine&am=5&cu=INR">
+       Pay ₹5 via UPI
     </a>
 
-    <div class="note">
-      ₹5 per question • Instant AI response
+    <div class="trust">
+      100% Secure Payment via UPI  
     </div>
+
+    <div class="badges">
+      <span>✔ Google Pay</span>
+      <span>✔ PhonePe</span>
+      <span>✔ Paytm</span>
+      <span>✔ BHIM</span>
+    </div>
+
   </div>
+
+  <div class="footer">
+    © 2025 AI Guru Knowledge Engine  
+    <br>Powered by AI Knowledge System
+  </div>
+
+</div>
 
 </body>
 </html>
