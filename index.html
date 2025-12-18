@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,78 +7,129 @@
 
 <style>
 body{
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:#fff;
+  font-family: system-ui, Arial;
+  background:#f2f4f8;
+  margin:0;
+}
+header{
+  background:#0d1b5e;
+  color:white;
+  padding:16px;
   text-align:center;
-  padding:20px;
 }
 .container{
-  background:#ffffff;
-  color:#000;
-  max-width:420px;
-  margin:auto;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  max-width:620px;
+  margin:30px auto;
+  background:white;
+  padding:22px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
-h1{font-size:24px;}
-.price{
-  font-size:36px;
-  color:#2e7d32;
-  font-weight:bold;
-  margin:10px 0;
+textarea{
+  width:100%;
+  height:110px;
+  padding:12px;
+  font-size:16px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+button{
+  width:100%;
+  margin-top:15px;
+  padding:14px;
+  font-size:16px;
+  border:none;
+  border-radius:8px;
+  background:#0d1b5e;
+  color:white;
+  cursor:pointer;
+}
+button:hover{opacity:.9}
+
+#paymentBox{
+  display:none;
+  margin-top:25px;
+  text-align:center;
+  border-top:1px solid #ddd;
+  padding-top:20px;
 }
 .qr img{
-  width:240px;
-  border-radius:12px;
+  width:180px;
 }
-.btn{
-  display:block;
-  margin-top:20px;
-  padding:15px;
-  background:#00c853;
-  color:#000;
-  font-size:18px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.trust{
+.note{
   font-size:13px;
   color:#555;
-  margin-top:10px;
+}
+.answer{
+  display:none;
+  margin-top:25px;
+  background:#e8f5e9;
+  padding:15px;
+  border-radius:8px;
+}
+.trust{
+  font-size:12px;
+  color:#777;
+  margin-top:12px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>AI Guru Knowledge Engine</h1>
-<p>Instant Answers • Fully Automatic</p>
+<header>
+<h2>AI Guru Knowledge Engine</h2>
+<p>Instant Answers • ₹5 per question</p>
+</header>
 
 <div class="container">
 
-<div class="price">₹5 Only</div>
+<h3>Ask your question</h3>
 
-<p>Scan QR & Pay via UPI</p>
+<textarea id="question" placeholder="Type your question here..."></textarea>
+
+<button onclick="showPayment()">Get Answer</button>
+
+<div id="paymentBox">
+<h3>Unlock Answer – ₹5</h3>
 
 <div class="qr">
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=9307529851-2@ibl&pn=AI%20Guru%20Knowledge&am=5&cu=INR">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=9307529851-2@ibl&pn=AI%20Guru%20Knowledge%20Engine&am=5&cu=INR">
 </div>
 
-<p><b>UPI ID:</b> 9307529851-2@ibl</p>
+<p><b>UPI:</b> 9307529851-2@ibl</p>
+<p class="note">Pay using GPay / PhonePe / Paytm</p>
+
+<button onclick="showAnswer()">I Have Paid</button>
 
 <p class="trust">
-✔ Secure UPI Payment<br>
-✔ Works with GPay / PhonePe / Paytm
+🔒 Secure UPI • No login • Instant access
 </p>
+</div>
 
-<a class="btn" href="#">
-Ask Question After Payment
-</a>
+<div class="answer" id="answerBox">
+<h3>Answer</h3>
+<p>
+This is a demo AI answer.<br>
+(Next phase: real AI + auto payment verification)
+</p>
+</div>
 
 </div>
+
+<script>
+function showPayment(){
+  const q=document.getElementById("question").value.trim();
+  if(q===""){
+    alert("Please type a question first");
+    return;
+  }
+  document.getElementById("paymentBox").style.display="block";
+}
+function showAnswer(){
+  document.getElementById("answerBox").style.display="block";
+}
+</script>
 
 </body>
 </html>
