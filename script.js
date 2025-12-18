@@ -1,33 +1,15 @@
-function payNow() {
-  const q = document.getElementById("question").value.trim();
+function askQuestion() {
+  const question = document.getElementById("question").value.toLowerCase();
+  const answerBox = document.getElementById("answer");
 
-  if (q === "") {
-    alert("Please enter your question");
+  if (question.trim() === "") {
+    alert("Please enter a question");
     return;
   }
 
-  //https://rzp.io/rzp/OPuKcBe
-  const razorpayLink = "PASTE_YOUR_RAZORPAY_LINK_HERE";
+  // 👉 Razorpay Payment Link (इथे तुझी खरी link टाक)
+  const paymentLink = "https://rzp.io/rzp/OPuKcBe";
 
-  window.open(razorpayLink, "_blank");
-
-  setTimeout(() => {
-    showAnswer(q);
-  }, 3000); // demo delay
-}
-
-function showAnswer(question) {
-  let answer = "Thank you for your payment. Your AI-powered answer will appear here soon.";
-
-  const lowerQ = question.toLowerCase();
-
-  for (let item of aiData) {
-    if (lowerQ.includes(item.keyword)) {
-      answer = item.answer;
-      break;
-    }
-  }
-
-  document.getElementById("answerText").innerText = answer;
-  document.getElementById("answerBox").style.display = "block";
+  // User ला payment page वर redirect करा
+  window.location.href = paymentLink;
 }
