@@ -1,5 +1,18 @@
-{
-  "what is ai": "AI stands for Artificial Intelligence – machines that can think, learn and adapt like humans.",
-  "benefits of meditation": "Meditation reduces stress, improves focus, and increases happiness.",
-  "who is krishna": "Lord Krishna is considered the 8th avatar of Lord Vishnu in Hindu tradition."
-}
+const aiData = [
+  {
+    keyword: "what is ai",
+    answer: "Artificial Intelligence (AI) is a technology that enables machines to think, learn, and make decisions like humans."
+  },
+  {
+    keyword: "health",
+    answer: "Good health depends on balanced diet, proper sleep, regular exercise, and mental peace."
+  },
+  {
+    keyword: "study tips",
+    answer: "Study daily, revise regularly, avoid distractions, and practice active learning for best results."
+  },
+  {
+    keyword: "astrology",
+    answer: "Astrology studies planetary movements and their influence on human life and behavior."
+  }
+];
