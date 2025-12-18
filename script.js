@@ -1,19 +1,33 @@
+function payNow() {
+  const q = document.getElementById("question").value.trim();
 
-document.addEventListener("DOMContentLoaded", function () {
+  if (q === "") {
+    alert("Please enter your question");
+    return;
+  }
 
-  const payBtn = document.getElementById("payBtn");
+  //https://rzp.io/rzp/OPuKcBe
+  const razorpayLink = "PASTE_YOUR_RAZORPAY_LINK_HERE";
 
-  payBtn.addEventListener("click", function () {
+  window.open(razorpayLink, "_blank");
 
-    // plink_Rsl6CgWQjBqzg5
-    const razorpayLink = "PASTE_YOUR_RAZORPAY_LINK_HERE";
+  setTimeout(() => {
+    showAnswer(q);
+  }, 3000); // demo delay
+}
 
-    window.open(razorpayLink, "_blank");
+function showAnswer(question) {
+  let answer = "Thank you for your payment. Your AI-powered answer will appear here soon.";
 
-    // Demo unlock (payment verify नंतर पुढच्या phase मध्ये)
-    setTimeout(() => {
-      document.getElementById("answer").style.display = "block";
-    }, 3000);
-  });
+  const lowerQ = question.toLowerCase();
 
-});
+  for (let item of aiData) {
+    if (lowerQ.includes(item.keyword)) {
+      answer = item.answer;
+      break;
+    }
+  }
+
+  document.getElementById("answerText").innerText = answer;
+  document.getElementById("answerBox").style.display = "block";
+}
