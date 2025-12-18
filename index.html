@@ -1,132 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AI Guru Knowledge Engine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <title>AI Knowledge Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
-    }
-
-    header {
       text-align: center;
-      padding: 30px 15px;
+      padding: 40px 10px;
     }
-
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 14px;
-      opacity: 0.85;
-    }
-
-    .container {
-      max-width: 900px;
+    .box {
+      max-width: 420px;
       margin: auto;
-      padding: 15px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.08);
-      border-radius: 15px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    textarea {
-      width: 100%;
-      height: 110px;
-      border-radius: 10px;
-      border: none;
-      padding: 12px;
-      font-size: 14px;
-      outline: none;
-      resize: none;
-    }
-
-    .btn {
-      margin-top: 15px;
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      background: linear-gradient(90deg,#ff9800,#ff5722);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-
-    .price {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    .answer-box {
-      display: none;
-      margin-top: 20px;
-      background: rgba(0,0,0,0.4);
+      background: #111;
+      padding: 25px;
       border-radius: 12px;
-      padding: 15px;
-      line-height: 1.6;
-      font-size: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
     }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      opacity: 0.7;
+    h1 {
+      color: #00ffd5;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      background: #00ffd5;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .note {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #ccc;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>🤖 AI Guru Knowledge Engine</h1>
-  <p>Ask Anything • Instant Paid Answer • 100% Automatic</p>
-</header>
+  <div class="box">
+    <h1>AI Knowledge Engine</h1>
+    <p>Ask any question and get instant AI answer</p>
 
-<div class="container">
+    <input type="text" placeholder="Type your question here" />
 
-  <div class="card">
-    <h3>Ask Your Question</h3>
-    <textarea id="question" placeholder="Type your question here..."></textarea>
+    <!-- 🔴 PAY BUTTON WITH RAZORPAY LINK -->
+    <a href="https://rzp.io/rzp/OPuKcBe" target="_blank">
+      <button>Pay ₹5 & Get Answer</button>
+    </a>
 
-    <button class="btn" onclick="payNow()">Pay ₹5 & Get Answer</button>
-    <div class="price">₹5 per question • Instant Answer</div>
+    <div class="note">
+      ₹5 per question • Instant AI response
+    </div>
   </div>
-
-  <div class="card answer-box" id="answerBox">
-    <h3>AI Answer</h3>
-    <p id="answerText"></p>
-  </div>
-
-</div>
-
-<footer>
-  © 2025 AI Guru Knowledge Engine • Powered by AI
-</footer>
-
-<script src="data.js"></script>
-<script src="script.js"></script>
 
 </body>
 </html>
