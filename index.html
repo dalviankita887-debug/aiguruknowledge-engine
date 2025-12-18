@@ -1,23 +1,132 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>AI Guru Knowledge Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 15px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    textarea {
+      width: 100%;
+      height: 110px;
+      border-radius: 10px;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+      outline: none;
+      resize: none;
+    }
+
+    .btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg,#ff9800,#ff5722);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .price {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .answer-box {
+      display: none;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 12px;
+      padding: 15px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
 
-  <h2>Ask Your Question</h2>
+<header>
+  <h1>🤖 AI Guru Knowledge Engine</h1>
+  <p>Ask Anything • Instant Paid Answer • 100% Automatic</p>
+</header>
 
-  <input type="text" placeholder="Type your question..." />
+<div class="container">
 
-  <br><br>
+  <div class="card">
+    <h3>Ask Your Question</h3>
+    <textarea id="question" placeholder="Type your question here..."></textarea>
 
-  <a href="plink_Rsl6CgWQjBqzg5" target="_blank">
-    <button style="font-size:18px;padding:10px 20px;">
-      Pay ₹5 & Unlock Answer
-    </button>
-  </a>
+    <button class="btn" onclick="payNow()">Pay ₹5 & Get Answer</button>
+    <div class="price">₹5 per question • Instant Answer</div>
+  </div>
+
+  <div class="card answer-box" id="answerBox">
+    <h3>AI Answer</h3>
+    <p id="answerText"></p>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 AI Guru Knowledge Engine • Powered by AI
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
