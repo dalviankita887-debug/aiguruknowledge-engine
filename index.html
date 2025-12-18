@@ -3,147 +3,81 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Guru Knowledge Engine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
-  margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:#fff;
-}
-
-.wrapper{
-  max-width:430px;
-  margin:auto;
-  padding:25px 15px;
-}
-
-.brand{
   text-align:center;
-  margin-bottom:20px;
+  padding:20px;
 }
-.brand h1{
-  font-size:26px;
-  margin:0;
-}
-.brand p{
-  opacity:0.9;
-  font-size:14px;
-}
-
-.card{
+.container{
   background:#ffffff;
   color:#000;
-  border-radius:20px;
+  max-width:420px;
+  margin:auto;
   padding:25px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
-
+h1{font-size:24px;}
 .price{
   font-size:36px;
+  color:#2e7d32;
   font-weight:bold;
-  color:#1b5e20;
-  text-align:center;
+  margin:10px 0;
 }
-
-.sub{
-  text-align:center;
-  font-size:14px;
-  margin-bottom:15px;
-  color:#333;
+.qr img{
+  width:240px;
+  border-radius:12px;
 }
-
-ul{
-  padding-left:18px;
-  font-size:15px;
-}
-ul li{
-  margin:8px 0;
-}
-
-.pay-btn{
+.btn{
   display:block;
   margin-top:20px;
-  padding:16px;
-  text-align:center;
-  background:linear-gradient(135deg,#00c853,#64dd17);
+  padding:15px;
+  background:#00c853;
   color:#000;
   font-size:18px;
-  font-weight:bold;
-  border-radius:14px;
+  border-radius:12px;
   text-decoration:none;
+  font-weight:bold;
 }
-
 .trust{
-  margin-top:15px;
   font-size:13px;
-  color:#444;
-  text-align:center;
-}
-
-.badges{
-  display:flex;
-  justify-content:space-around;
-  margin-top:12px;
-  font-size:12px;
-  color:#333;
-}
-
-.footer{
-  text-align:center;
-  margin-top:25px;
-  font-size:12px;
-  opacity:0.85;
+  color:#555;
+  margin-top:10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<h1>AI Guru Knowledge Engine</h1>
+<p>Instant Answers • Fully Automatic</p>
 
-  <div class="brand">
-    <h1>AI Guru Knowledge Engine</h1>
-    <p>Instant Paid AI Answers • Trusted Platform</p>
-  </div>
+<div class="container">
 
-  <div class="card">
+<div class="price">₹5 Only</div>
 
-    <div class="price">₹5</div>
-    <div class="sub">Per Question • One-Time Payment</div>
+<p>Scan QR & Pay via UPI</p>
 
-    <ul>
-      <li>✔ Accurate AI-Generated Answers</li>
-      <li>✔ Exams, Health, Knowledge, Daily Questions</li>
-      <li>✔ No Signup • No Subscription</li>
-      <li>✔ Pay Only When You Need</li>
-    </ul>
+<div class="qr">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=9307529851-2@ibl&pn=AI%20Guru%20Knowledge&am=5&cu=INR">
+</div>
 
-    <!-- 🔴 UPI PAYMENT BUTTON -->
-    <a class="pay-btn"
-       href="upi://pay?pa=9307529851-2@ibl&pn=AI Guru Knowledge Engine&am=5&cu=INR">
-       Pay ₹5 via UPI
-    </a>
+<p><b>UPI ID:</b> 9307529851-2@ibl</p>
 
-    <div class="trust">
-      100% Secure Payment via UPI  
-    </div>
+<p class="trust">
+✔ Secure UPI Payment<br>
+✔ Works with GPay / PhonePe / Paytm
+</p>
 
-    <div class="badges">
-      <span>✔ Google Pay</span>
-      <span>✔ PhonePe</span>
-      <span>✔ Paytm</span>
-      <span>✔ BHIM</span>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    © 2025 AI Guru Knowledge Engine  
-    <br>Powered by AI Knowledge System
-  </div>
+<a class="btn" href="#">
+Ask Question After Payment
+</a>
 
 </div>
 
