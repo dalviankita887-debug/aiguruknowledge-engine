@@ -1,1 +1,101 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Skill Course | Learn High Income Skills</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg,#4a00e0,#8e2de2);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #4a00e0;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #3a00b8;
+    }
+    .buy {
+      background: #00b894;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+    }
+    .trust {
+      color: #555;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .locked {
+      filter: blur(4px);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AI High Income Skill Course</h1>
+  <p>Zero to Advance | Certificate Included</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🔥 Free Demo Lesson</h2>
+    <button onclick="loadFreeLesson()">View Demo</button>
+    <div id="freeContent"></div>
+  </div>
+
+  <div class="card">
+    <h2>🔒 Full Course (Paid)</h2>
+    <p>Complete AI + Office + Freelancing Skills</p>
+
+    <div id="paidContent" class="locked"></div>
+
+    <a class="buy" href="https://dalviankita.gumroad.com/l/vmodv" target="_blank">
+      Unlock Full Course ₹499
+    </a>
+
+    <div class="trust">
+      ⭐⭐⭐⭐⭐ 4.9 Rating | 1,20,000+ Students Enrolled
+    </div>
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
