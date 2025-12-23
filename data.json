@@ -1,49 +1,14 @@
-
-const courseData = {
-  freeDemo: {
-    title: "AI Email Writing",
-    content: `
-    <h3>Prompt:</h3>
-    <p>
-    Write a professional office email for one day sick leave.
-    </p>
-
-    <h3>Example Output:</h3>
-    <p>
-    Subject: Sick Leave Request<br><br>
-    Dear Manager,<br>
-    I am not feeling well today, so I request one day sick leave.
-    <br><br>Thank you.
-    </p>
-    `
-  },
-
-  paidCourse: {
-    modules: [
-      {
-        title: "Module 1: ChatGPT Basics",
-        content: `
-        <h3>What is ChatGPT?</h3>
-        <p>ChatGPT is an AI tool used for writing, learning and earning.</p>
-        `
-      },
-      {
-        title: "Module 2: Office Work with AI",
-        content: `
-        <h3>Email Prompt</h3>
-        <p>Write a professional HR email for salary increment.</p>
-
-        <h3>Excel Prompt</h3>
-        <p>Create Excel formula for attendance calculation.</p>
-        `
-      },
-      {
-        title: "Module 3: Freelancing & Income",
-        content: `
-        <h3>Freelancing Prompt</h3>
-        <p>Generate Fiverr gig description for AI services.</p>
-        `
-      }
-    ]
+const courseData = [
+  {
+    id: 1,
+    title: "Excel Basics – Demo Question",
+    question: "Which Excel formula is used to calculate total?",
+    options: [
+      "A) =ADD()",
+      "B) =SUM()",
+      "C) =TOTAL()",
+      "D) =PLUS()"
+    ],
+    answer: "Correct Answer: B) =SUM() is used to calculate total in Excel."
   }
-};
+];
