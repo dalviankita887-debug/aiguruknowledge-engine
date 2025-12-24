@@ -1,14 +1,24 @@
-const courseData = [
-  {
-    id: 1,
-    title: "Excel Basics – Demo Question",
-    question: "Which Excel formula is used to calculate total?",
-    options: [
-      "A) =ADD()",
-      "B) =SUM()",
-      "C) =TOTAL()",
-      "D) =PLUS()"
-    ],
-    answer: "Correct Answer: B) =SUM() is used to calculate total in Excel."
-  }
+const data = {
+en: [
+{q:"What is Excel used for?",a:"Data analysis, reporting, calculations"},
+{q:"What is Tally?",a:"Accounting and GST software"},
+{q:"What is Power BI?",a:"Business intelligence tool"}
+],
+hi: [
+{q:"Excel किस लिए उपयोग होता है?",a:"डेटा विश्लेषण और रिपोर्टिंग"},
+{q:"Tally क्या है?",a:"अकाउंटिंग और GST सॉफ्टवेयर"},
+{q:"Power BI क्या है?",a:"बिजनेस एनालिटिक्स टूल"}
+],
+mr: [
+{q:"Excel कशासाठी वापरतात?",a:"डेटा विश्लेषण आणि रिपोर्टिंगसाठी"},
+{q:"Tally म्हणजे काय?",a:"अकाउंटिंग व GST सॉफ्टवेअर"},
+{q:"Power BI म्हणजे काय?",a:"बिझनेस इंटेलिजन्स टूल"}
+]
+};
+const seoKeywords = [
+"Learn Excel in Marathi",
+"Tally course online India",
+"Power BI course for job",
+"Excel certification course",
+"Tally with GST training"
 ];
