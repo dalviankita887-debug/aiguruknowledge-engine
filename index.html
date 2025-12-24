@@ -1,24 +1,52 @@
-const data = {
-en: [
-{q:"What is Excel used for?",a:"Data analysis, reporting, calculations"},
-{q:"What is Tally?",a:"Accounting and GST software"},
-{q:"What is Power BI?",a:"Business intelligence tool"}
-],
-hi: [
-{q:"Excel किस लिए उपयोग होता है?",a:"डेटा विश्लेषण और रिपोर्टिंग"},
-{q:"Tally क्या है?",a:"अकाउंटिंग और GST सॉफ्टवेयर"},
-{q:"Power BI क्या है?",a:"बिजनेस एनालिटिक्स टूल"}
-],
-mr: [
-{q:"Excel कशासाठी वापरतात?",a:"डेटा विश्लेषण आणि रिपोर्टिंगसाठी"},
-{q:"Tally म्हणजे काय?",a:"अकाउंटिंग व GST सॉफ्टवेअर"},
-{q:"Power BI म्हणजे काय?",a:"बिझनेस इंटेलिजन्स टूल"}
-]
-};
-const seoKeywords = [
-"Learn Excel in Marathi",
-"Tally course online India",
-"Power BI course for job",
-"Excel certification course",
-"Tally with GST training"
-];
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Skill Course Engine | Excel, Tally, Power BI</title>
+<meta name="description" content="Learn Excel, Tally, Power BI in Marathi, Hindi and English. Job oriented skill courses with certificate.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;background:#f5f7fa;margin:0;padding:0}
+header{background:#1a237e;color:white;padding:20px;text-align:center}
+.card{background:white;margin:20px;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
+button{background:#ff6f00;color:white;border:none;padding:12px 20px;border-radius:6px;font-size:16px}
+input{padding:10px;width:100%;margin-top:10px}
+.lang{float:right}
+</style>
+</head>
+<body>
+
+<header>
+<h1>AI Skill Learning Engine</h1>
+<p>Excel • Tally • Power BI • Certificate Included</p>
+</header>
+
+<div class="card">
+<h2>Select Language</h2>
+<select id="lang" onchange="loadQuestions()">
+<option value="en">English</option>
+<option value="hi">Hindi</option>
+<option value="mr">Marathi</option>
+</select>
+</div>
+
+<div class="card" id="questionBox"></div>
+
+<div class="card">
+<h3>Unlock Full Course</h3>
+<p>Pay ₹499 one time and get full access + certificate.</p>
+<button onclick="window.open('https://dalviankita.gumroad.com/l/vmodv')">Buy Now</button>
+</div>
+
+<div class="card">
+<h3>Get Free Updates</h3>
+<input type="email" placeholder="Enter your email" id="email">
+<button onclick="saveEmail()">Subscribe</button>
+<p id="emailMsg"></p>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
