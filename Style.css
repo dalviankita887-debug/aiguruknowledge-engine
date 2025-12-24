@@ -1,51 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-  padding: 0;
+function loadQuestions(){
+let lang=document.getElementById("lang").value;
+let box=document.getElementById("questionBox");
+box.innerHTML="";
+data[lang].forEach(d=>{
+box.innerHTML+=`<h3>${d.q}</h3><p>${d.a}</p>`;
+});
 }
+loadQuestions();
 
-header {
-  background: #0b5ed7;
-  color: white;
-  padding: 20px;
-  text-align: center;
+function saveEmail(){
+let e=document.getElementById("email").value;
+if(!e.includes("@")){alert("Enter valid email");return;}
+localStorage.setItem("lead_"+Date.now(),e);
+document.getElementById("emailMsg").innerText="Thanks! You will receive updates.";
 }
-
-main {
-  padding: 20px;
+function loadSEO(){
+let box=document.getElementById("questionBox");
+seoKeywords.forEach(k=>{
+box.innerHTML+=`<p>🔥 ${k} — Learn with certificate</p>`;
+});
 }
-
-#question-box {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-button {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  cursor: pointer;
-}
-
-#unlockBtn {
-  background: #198754;
-  color: white;
-  font-size: 16px;
-}
-
-.trust {
-  margin-top: 20px;
-  background: #fff3cd;
-  padding: 10px;
-  border-radius: 6px;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #eee;
-}
+loadSEO();
